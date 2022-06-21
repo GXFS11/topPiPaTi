@@ -1,2 +1,4 @@
-# topPiPaTi
-Práctica de TheOdinProject: Piedra, papel y tijeras
+# topPiPaTI
+Práctica de TheOdinProject: Piedra-Papel-Tijeras
+
+ - Usando estilos de FizzBuzz y jsCalcu
