@@ -13,7 +13,7 @@
 				<br> Dependiendo de lo que elija, ganará o perderá.
 				<br> Piedra vence tijeras, tijeras vence papel, papel vence piedra.
 			</div>
-			<div class = "fila separar centradosV">
+			<div class = "fila separarM centradosV">
 				<div class = "fila centradosV">
 					<label for = uno class = txt>Usted</label>
 					<select id = uno onchange = "ajugar()">
@@ -29,14 +29,15 @@
 				</div>	
 			</div>
 			<div class = "fila centradosV separarM wire">
-				<img class = wire height = 48px />
-				<button id = btn>Jugar</button>
+				<img class = wire height = "48px"/>
+				<button id = btn onclick = "jugar()">Jugar</button>
 				<img class = wire height = "48px"/>
 			</div>
 			
-			<div class = "desc pulsar espaciado">¿Quién ganará?</div>
+			<div id = res class = "desc pulsar espaciado">¿Quién ganará?</div>
 		</div>
 		<script src = https://gxfs11.github.io/jsCalcu/javascript.js></script>
 		<script src = ./js/scr.js></script>
+		<script>elegir();</script>
 	</BODY>
 </html>
