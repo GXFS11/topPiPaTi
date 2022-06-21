@@ -6,6 +6,37 @@
 		<title>Piedra-Papel-Tijeras</title>
 	</HEAD>
 	<BODY>
-		hola
+		<div class = "columna centradosV espaciadoG separarM">
+			<div class = ttl>Piedra-Papel-Tijeras</div>
+			<div class = "txt espaciado">
+				En este juego, usted elige una de las 3 opciones: piedra, papel, o tijeras.
+				<br> Dependiendo de lo que elija, ganará o perderá.
+				<br> Piedra vence tijeras, tijeras vence papel, papel vence piedra.
+			</div>
+			<div class = "fila separar centradosV">
+				<div class = "fila centradosV">
+					<label for = uno class = txt>Usted</label>
+					<select id = uno onchange = "ajugar()">
+						<option>Piedra</option>
+						<option>Papel</option>
+						<option>Tijeras</option>
+					</select>
+				</div>
+				<div class = ttl>X</div>
+				<div class = "fila centradosV">
+					<input id = dos disabled value = eligiendo size = 8/>
+					<label for = dos class = txt>cpu</label>
+				</div>	
+			</div>
+			<div class = "fila centradosV separarM wire">
+				<img class = wire height = 48px />
+				<button id = btn>Jugar</button>
+				<img class = wire height = "48px"/>
+			</div>
+			
+			<div class = "desc pulsar espaciado">¿Quién ganará?</div>
+		</div>
+		<script src = https://gxfs11.github.io/jsCalcu/javascript.js></script>
+		<script src = ./js/scr.js></script>
 	</BODY>
 </html>
