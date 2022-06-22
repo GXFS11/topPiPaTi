@@ -58,6 +58,9 @@
 	
 	border-radius: 12px;
 }
+.x {
+	color: var(--resalte) !important;
+}
 .verde {
 	color: #A0FFA0 !important;
 	background-color: #1A2A15;
