@@ -49,3 +49,27 @@
 	display: flex;
 	justify-content: center;
 }
+.resultado {
+	font: bold 24px var(--ttl);
+	color: white;
+	background-color: #1A1A1A;
+	padding: 20px 40px;
+	border: solid 2px #101010;
+	
+	border-radius: 12px;
+}
+.verde {
+	color: #A0FFA0 !important;
+	background-color: #103010;
+}
+.rojo {
+	color: #FFA0A0 !important;
+	background-color: #301010;
+}
+.azul {
+	color: #A0A0FF !important;
+	background-color: #101030;
+}
+.sombra {
+	filter: drop-shadow(0 0 2px black);
+}
