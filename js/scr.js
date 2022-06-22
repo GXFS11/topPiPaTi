@@ -3,7 +3,9 @@ const jg = document.getElementById('btn'),
 	res = document.getElementById('res'),
 	selc = document.getElementById('dos'),
 	cartaI = document.getElementById('car1'),
-	cartaD = document.getElementById('car2');
+	cartaD = document.getElementById('car2'),
+	con = document.getElementById('uscon'),
+	conc = document.getElementById('aqcon');
 let ele, cam = false;
 function ajugar () {
 	//jg.removeAttribute ("disabled");
@@ -33,11 +35,13 @@ function jugar () {
 	selc.value = pipati (ele);
 	cambiar (cartaI, us);
 	cambiar (cartaD, ele);
-	if (us == ele) result = "¡Empate!";
+	if (us == ele) { result = resultar (0); }
 		else {
-			if (us > ele || (us == 0 & ele == 2)) result = "¡Ha ganado!";
-			else if (us < ele || (us == 2 & ele == 0))
-				result = "Ha perdido...";
+			if (us > ele || (us == 0 & ele == 2)) { 
+				result = resultar (1);
+			} else if (us < ele || (us == 2 & ele == 0)) {
+				result = resultar (2); 
+			}
 		}
 	res.innerHTML = result;
 	animar ('pulsar', res);
@@ -46,9 +50,28 @@ function jugar () {
 }
 function cambiar (img, num) {
 	let pos = pipati (num).toLocaleLowerCase();
-	console.log (num + "|" + img.classList.toString());
-	for (i = 0; i < 3; i++)
-		img.classList.remove (pipati(i).toLocaleLowerCase());
-	void pos.offsetWidth;
-	img.classList.add (pos);
+	alterar (img, pos, "piedra", "papel", "tijeras");
+}
+function resultar (num) {
+	let msg = "", inc = con, dec = conc, color, color2;
+	switch (num) {
+		case 0: msg = "¡Empate!"; inc = con; color = color2 = "azul";
+			break;
+		case 1: msg = "¡Ha ganado!"; con.value = +con.value + 1;
+			color = "verde"; color2 = "rojo";
+			break;
+		case 2: default: msg = "Ha perdido..."; conc.value = +conc.value + 1;
+			color = "rojo"; color2 = "verde";
+	}
+	document.getElementById("cant").value++;
+	alterar (inc, color, "rojo", "azul", "verde");
+	alterar (dec, color2, "rojo", "azul", "verde");
+	alterar (res, color, "rojo", "azul", "verde");
+	return msg;
+}
+function alterar (elem, agregar, remover) {
+	if (arguments.length > 3) for (let c = 3; c < arguments.length; c++) elem.classList.remove (arguments[c]);
+	elem.classList.remove (remover);
+	void elem.offsetWidth;
+	elem.classList.add (agregar);
 }
