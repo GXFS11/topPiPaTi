@@ -2,26 +2,50 @@
 /* IMPORTA DE TOPFIZZBUZZ QUE A SU VEZ IMPORTA DE JSCALCU */
 :root {
 	/* v Deben ser de la altura de la img og */
-	--sprw: 176px;
-	--sprh: 64px;
+	--sprw: 199px;
+	--sprh: 72px;
 	--crt: calc(var(--sprw) / 4);
 	--img: url('../imgs/pipati.png') no-repeat;
+	--ico: url('../imgs/icoPipati.png') no-repeat;
+	--icow: 81px;
+	--icoc: calc(var(--icow) / 3);
+	--icoh: 36px;
 }
+.icos {
+	width: var(--icow);
+	height: var(--icoh);
+	background: var(--ico);
+}
+.pi { width: var(--icoc); background-position: 0 0; }
+.pa { width: var(--icoc); background-position: calc(var(--icow) / -3) 0; }
+.ti { width: var(--icoc); background-position: calc(var(--icow) / -3 * 2) 0; }
 .carta {
 	width: var(--crt);
 	height: var(--sprh);
 	background: var(--img);
 	background-position: 0 0;
+	border-radius: 12px;
 }
-.oculto {
-	background: var(--img) 0 0;
+.oculto { background-position: 0 0; }
+.piedra { background-position: calc(var(--sprw) / -4) 0 ; }
+.papel {  background-position: calc(var(--sprw) / -4 * 2) 0 ; }
+.tijeras { 	background-position: calc(var(--sprw) / -4 * 3) 0 ; }
+
+.lineaM { 
+	background-color: #909090;
+	width: 25vw; height: 2px; 
+	border: none;
 }
-.piedra {
-	background: var(--img) calc(var(--sprw) / -4) 0 ;
-}
-.papel {
-	background: var(--img) calc(var(--sprw) / -4 * 2) 0 ;
-}
-.tijeras {
-	background: var(--img) calc(var(--sprw) / -4 * 3) 0 ;
+.esp { gap: 5vw; }
+.espM { gap: 2vw; }
+.pie {
+	font: bold 16px var(--txt);
+	letter-spacing: 2px;
+	color: #909090;
+	background-color: #1A1A1A;
+	margin-top: 5vh;
+	border-top: 2px solid black;
+	padding: 3vh 5vw;
+	display: flex;
+	justify-content: center;
 }
