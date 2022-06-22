@@ -1,3 +1,23 @@
 @import url(https://gxfs11.github.io/topFizzBuzz/css/style.css);
 /* IMPORTA DE TOPFIZZBUZZ QUE A SU VEZ IMPORTA DE JSCALCU */
-
+:root {
+	--spr: 132px;
+	--crt: calc(132px / 4);
+	--img: url('../imgs/pipati.png');
+}
+.carta {
+	width: var(--crt);
+	background: var(--img) 0 0;
+}
+.oculto {
+	background: var(--img) 0 0;
+}
+.piedra {
+	background: var(--img) calc(var(--spr) / -4) 0 ;
+}
+.papel {
+	background: var(--img) calc(var(--spr) / -4 * 2) 0 ;
+}
+.tijeras {
+	background: var(--img) calc(var(--spr) / -4 * 3) 0 ;
+}
