@@ -60,15 +60,15 @@
 }
 .verde {
 	color: #A0FFA0 !important;
-	background-color: #103010;
+	background-color: #152A1A;
 }
 .rojo {
 	color: #FFA0A0 !important;
-	background-color: #301010;
+	background-color: #2A151A;
 }
 .azul {
 	color: #A0A0FF !important;
-	background-color: #101030;
+	background-color: #1A152A;
 }
 .sombra {
 	filter: drop-shadow(0 0 2px black);
