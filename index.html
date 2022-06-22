@@ -6,16 +6,26 @@
 		<title>Piedra-Papel-Tijeras</title>
 	</HEAD>
 	<BODY>
-		<div class = "columna centradosV espaciadoG separar">
+		<div class = "columna centradosV espaciado separarM">
 			<div class = ttl>Piedra-Papel-Tijeras</div>
+			
 			<div class = "txt espaciado">
 				En este juego, usted elige una de las 3 opciones: piedra, papel, o tijeras.
-				<br> Dependiendo de lo que elija, ganará o perderá.
-				<br> Piedra vence tijeras, tijeras vence papel, papel vence piedra.
+				<br/> Dependiendo de lo que elija, ganará o perderá.
+				<br/> Piedra vence tijeras, tijeras vence papel, papel vence piedra.
 			</div>
-			<div class = "fila separarM centradosV">
+
+			<div class = "fila espM centradosV">
+				<hr class = lineaM />
+				<div class = "icos pi"></div>
+				<div class = "icos pa"></div>
+				<div class = "icos ti"></div>
+				<hr class = lineaM />
+			</div>
+
+			<div class = "fila esp centrados">
 				<div class = "fila centradosV">
-					<label for = uno class = txt>Usted</label>
+					<label for = uscon class = txt>Usted</label>
 					<select id = uno onchange = "ajugar()">
 						<option>Piedra</option>
 						<option>Papel</option>
@@ -24,22 +34,26 @@
 				</div>
 				<div class = sbttl>contra</div>
 				<div class = "fila centradosV">
-					<input id = dos disabled value = eligiendo size = 8/>
+					<input id = dos disabled value = "eligiendo" size = 7/>
 					<label for = dos class = txt>cpu</label>
 				</div>
 			</div>
-			<div class = "fila centradosV separarM">
-				<div id = car1 class = "carta"></div>
+			<div class = "fila centrados esp">
+				<input id = uscon disabled size = 2 value = 0 />
+				<div id = car1 class = carta></div>
 				<div class = ttl>X</div>
-				<div id = car2 class = "carta"></div>
+				<div id = car2 class = carta></div>
+				<input id = aqcon disabled size = 2 value = 0 />
 			</div>
-			<div class = "fila centradosV">
-				<div></div>
+			<div class = "fila espM centradosV">
+				<hr class = lineaM />
 				<button id = btn onclick = "jugar()">Jugar</button>
+				<hr class = lineaM />
 			</div>
 			
 			<div id = res class = "advert pulsar espaciado">¿Quién ganará?</div>
 		</div>
+		<footer class = "pie centradosV separar"> <div class = "icos pa"></div><div>GXFS11 (2022)</div></footer>
 		<script src = https://gxfs11.github.io/jsCalcu/javascript.js></script>
 		<script src = ./js/scr.js></script>
 		<script>elegir();</script>
