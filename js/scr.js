@@ -19,6 +19,7 @@ function elegir () {
 	cam = true;
 	cambiar (cartaI, sel.selectedIndex);
 	cambiar (cartaD, -1);
+	alterar (res, "azul", "rojo", "verde");
 	res.innerHTML = "¿Preparado?";
 }
 function pipati (num) { 
